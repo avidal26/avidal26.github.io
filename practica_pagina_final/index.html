@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica #5</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="node_modules/lena.js/dist/browser.js"></script>
+</head>
+
+<body onload="getImage()">
+    <img src="" id="imagen">
+    <script>
+        var url = "https://picsum.photos/1559/950";
+        function getImage() {
+            var imagen = document.getElementById("imagen");
+            fetch(url).then(response => {
+                console.log(response);
+                imagen.src = response.url;
+            }).catch(error => {
+                console.log(error);
+                alert("Hay un error al cargar el fondo de la página");
+            });
+        };
+    </script>
+    <header>
+        <h1>PRUEBA DE FILTROS</h1>
+    </header>
+    <article>
+        <section>
+    
+                <p>Cambia de filtro</p>
+                <button class= "botonD" id="filtro1" onclick="getImage()">Cambiar Fondo</button>
+                <button class= "boton" id="filtro1" onclick="noFilter()">Obtener Imagen</button>
+                <button class= "boton1" id="filtro1" onclick="filter1()">Filtro Azul</button>
+                <button class= "boton2"id="filtro2" onclick="filter2()">Filtro Invertido</button>
+                <button class= "boton3"id="filtro3" onclick="filter3()">Filtro Highpass</button>
+                <button class= "boton4"id="filtro4" onclick="filter4()">Filtro Sepia</button>
+                <button class= "boton5"id="filtro5" onclick="filter5()">Filtro Grayscale</button>
+                <button class= "boton6"id="filtro6" onclick="filter6()">Filtro Espejo</button>
+                <button class= "boton7"id="filtro7" onclick="filter7()">Filtro Gaussiano</button>
+                <button class= "boton8"id="filtro8" onclick="filter8()">Filtro Canny</button>
+                <button class= "boton9"id="filtro9" onclick="filter9()">Filtro Saturado</button>
+                <button class= "quitar" id="nofiltro" onclick="noFilter()">Quitar Filtro</button>
+        </section> 
+
+        <section>
+                    <img src="lena.jpg" id="imagen-original">
+                    <canvas width="1000" height="500" id="nueva-imagen"></canvas>
+                    <script type="text/javascript">
+                        function filter1() {
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var filter = LenaJS["blue"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter2() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["invert"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter3() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["highpass"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter4() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["sepia"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter5() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["grayscale"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter6() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["mirror"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter7() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["gaussian"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter8() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["canny"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter9() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["saturation"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function filter10() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["roberts"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                        function noFilter() {
+                            var imagenNuevaCanvas = document.getElementById("nueva-imagen");
+                            var imagenOriginal = document.getElementById("imagen-original");
+                            var filter = LenaJS["sharpen"];
+                            LenaJS.filterImage(imagenNuevaCanvas, filter, imagenOriginal);
+                        };
+                    </script>
+
+        
+        </section>
+    </article>
+    
+        <footer class="final">
+            <ul>
+                <li>Angelica Sofia Vidal Abril</li>
+                <li>Contactanos por:</li>
+                <li>Mail:</li>
+                <li><a href="mailto:angevidalabril@gmail.com">angevidalabril@gmail.com</a></li>
+                <li>Telefono:</li>
+                <li><a href="tel:0987817308">0987817308</a></li>
+                <li> © Todos los derechos reservados</li>   
+            </ul>
+          </footer>
+  
+</body>
+</html>
