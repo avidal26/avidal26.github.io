@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/estilos.css" type="text/css" media="screen">
+    <script src="../script/preguntas.js"></script>
+    <title>Preguntas</title>
+</head>
+<body onload="ocultar()">
+
+    <div id="principal">
+        
+        <div id="inicio">
+            <button onclick="iniciar()" id="iniciar">Iniciar</button>
+        </div>
+        
+        <div id="preguntas">
+
+            <div id="cabeza">
+                <img src="" id="imagen" width="800" height="400">
+                <p id="pregunta">Pregunta</p>
+            </div>
+
+            <div id="respuestas">
+                <form>
+                    <div id="respuestas1">
+                        <input type="button" value="" id="respuesta1" onclick="validarRespuesta(this.value)">
+                        <input type="button" value="" id="respuesta2" onclick="validarRespuesta(this.value)">
+                    </div>
+
+                    <div id="respuestas2">    
+                        <input type="button" value="" id="respuesta3" onclick="validarRespuesta(this.value)">
+                        <input type="button" value="" id="respuesta4" onclick="validarRespuesta(this.value)">
+                    </div>
+
+                </form>
+            </div>
+
+            <audio id="feliz" src="../sonidos/feliz.mp3"></audio>
+            <audio id="triste" src="../sonidos/triste.mp3"></audio>
+            <audio id="ganaste" src="../sonidos/ganaste.mp3"></audio>
+            <audio id="perdiste" src="../sonidos/perdiste.mp3"></audio>
+
+            <div id="lienzo">
+                <canvas id="miCanvas" width="800" height="400"></canvas>
+            </div>
+    </div>
+
+</div>
+    
+</body>
+</html>

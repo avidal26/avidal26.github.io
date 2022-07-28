@@ -1,0 +1,104 @@
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    background-color: #745fbe;
+}
+
+body{
+
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+#principal{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+#inicio{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    text-align: center;
+}
+
+#iniciar{
+    margin-top: 15%;
+    width: 20%;
+    height: 20%;
+    border-radius: 10%;
+    font-size: xx-large;
+    color: white;
+    background-color: #e95975;
+    border: none;
+}
+
+#iniciar:hover{
+    background-color: #e67289;
+}
+
+#iniciar:active{
+    background-color: #fcca43;
+}
+
+#cabeza{
+    text-align: center;
+}
+
+p{
+    font-size: xx-large;
+    color: white;
+}
+
+#preguntas{
+    width: 100%;
+    height: 100%;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
+#respuestas, #respuestas1, #respuestas2{
+    width: 100%;
+    height: 50%;
+    text-align: center;
+}
+
+#respuestas{
+    width: 100%;
+    height: 40%;
+}
+
+#respuestas input{
+    width: 25%;
+    height: 40%;
+    border-radius: 7%;
+    font-size: xx-large;
+    color: white;
+    background-color: #e95975;
+    border: none;
+}
+
+#respuestas input:hover{
+    background-color: #e67289;
+}
+
+#respuestas input:active{
+    background-color: #fcca43;
+}
+
+canvas{
+    margin-top: 10%;
+    background-color: #604e9e;
+}
+
+#lienzo{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
